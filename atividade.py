@@ -42,12 +42,12 @@ print(f"Mensagem depois de o botão carregar: {msg.text}")
 driver.switch_to.window(driver.window_handles[2])
 barra_pesquisa = driver.find_element(By.NAME, "search")
 barra_pesquisa.send_keys("Automação")
-link = driver.find_element(By.LINK_TEXT, "português")
-texto = link.text
-destino = link.get_attribute("href")
+link_texto = driver.find_element(By.LINK_TEXT, "português")
+texto = link_texto.text
+destino = link_texto.get_attribute("href")
 driver.save_screenshot("evidencia_wiki.png")
 print(f"texto do link: {texto}")
-print(f"link oculto: {link}")
+print(f"link oculto: {destino}")
 
 driver.close()
 driver.quit()
